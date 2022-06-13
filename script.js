@@ -67,7 +67,7 @@ function computation() {
       result = parseFloat(result) / parseFloat(currentNum);
     }
   }
-  result = result.toFixed(2);
+  result = result.toFixed(6);
 }
 
 equals.addEventListener("click", () => {

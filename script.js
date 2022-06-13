@@ -1,6 +1,5 @@
 const previousDisplay = document.querySelector(".previousDisplay");
 const currentDisplay = document.querySelector(".currentDisplay");
-const cornerDisplay = document.querySelector(".cornerDisplay");
 const numbers = document.querySelectorAll(".btn-number");
 const operations = document.querySelectorAll(".btn-operation");
 const deleteLast = document.querySelector(".btn-delete");
@@ -46,7 +45,6 @@ function clearDigit(type = "") {
   currentDisplay.innerHTML = "";
   currentNum = "";
   previousDisplay.innerHTML = result;
-  cornerDisplay.innerText = result;
 }
 
 function computation() {
@@ -76,7 +74,6 @@ equals.addEventListener("click", () => {
   computation();
   clearDigit();
   currentDisplay.innerText = result;
-  cornerDisplay.innerText = "";
   currentNum = result;
   prevNum = "";
 });
@@ -87,7 +84,6 @@ clear.addEventListener("click", () => {
   previousDisplay.innerText = "";
   currentDisplay.innerText = "";
   result = "";
-  cornerDisplay.innerText = "";
 });
 
 deleteLast.addEventListener("click", () => {

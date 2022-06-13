@@ -19,6 +19,9 @@ numbers.forEach((number) => {
     } else if (e.target.innerText === "." && appendDot) {
       return;
     }
+
+    if (e.target.innerText === "0" && currentNum === "0") return;
+
     currentNum += e.target.innerText;
     currentDisplay.innerText = currentNum;
   });

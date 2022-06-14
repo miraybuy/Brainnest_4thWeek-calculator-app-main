@@ -62,9 +62,8 @@ function computation() {
   } else if (calculation === "/") {
     if (parseFloat(currentNum) == "0") {
       alert("infinity");
-      currentNum = "";
-      currentDisplay.innerText = "";
-      result = "";
+      currentDisplay.innerText = "0" + parseFloat(prevNum);
+      result = "0" + parseFloat(prevNum);
     } else {
       result = parseFloat(result) / parseFloat(currentNum);
     }
